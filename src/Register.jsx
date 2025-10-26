@@ -98,7 +98,6 @@ function Register() {
           <br />
           Letters, numbers, underscores, hyphens allowed.
         </p>
-
         {/* password */}
         <label htmlFor="password">
           Password:
@@ -139,7 +138,6 @@ function Register() {
           <span aria-label="dollar sign">$</span>
           <span aria-label="percent">%</span>
         </p>
-
         {/* confirm password */}
         <label htmlFor="confirm_pwd">
           Confirm Password:
@@ -170,7 +168,23 @@ function Register() {
           <FontAwesomeIcon icon={faInfoCircle} />
           Must match the first password input field.
         </p>
+
+        {/* submit button */}
+        <button
+          disabled={!validName || !validPwd || !validMatch ? true : false}
+        >
+          Sign Up
+        </button>
       </form>
+
+      <p>
+        Already registered?
+        <br />
+        <span className="line">
+          {/*put router link here*/}
+          <a href="#">Sign In</a>
+        </span>
+      </p>
     </section>
   );
 }
